@@ -1,0 +1,452 @@
+@import"colores";
+@import"function";
+@import"mixins";
+@import"variables";
+
+body{
+    h1 {
+        color: $rosa;
+        font-family: $montserrat;
+        font-weight: 900px;
+        font-size: 60px;
+        text-align: center;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        line-height: 10px;
+    }
+    h2 {
+        color: $grisOscuro;
+        font-family:$montserrat;
+        font-weight: 900px;
+        font-size: 60 px;
+        text-align: center;
+    }
+    h3 {
+       @extend h1;
+       font-weight:600;
+       font-size: 20px;
+       text-transform: uppercase;
+    }
+    h5 {
+        @extend h1;
+        font-size: 40px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    h6 {
+        @extend h2;
+        font-size: 15px; 
+    }
+    p {
+        font-family:$montserrat;
+        color: $grisOscuro;
+        font-size: 20px;
+        width: ($anchoParrafo/2)-500px;
+        text-align: justify;
+    }
+    legend{
+        color:$grisOscuro;
+        font-family:$montserrat;
+        font-weight:bold;
+        line-height: 25px;
+        font-size: 25px;
+        word-spacing: 2px;
+        text-align: center;
+    }
+    main {
+        div{
+        width: 100%;
+        height: 50%;  
+        }
+    }
+}
+
+article {
+     p{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    }
+}
+ // <!--Formularios-->
+ form{
+@include form;
+
+fieldset{
+    border: none;
+    height: $longitudForm/2;
+    select{
+        font-family: $montserrat;
+        font-size: 15px;
+            }
+ 
+        input[type="text"],
+        input[type="email"],
+        input[type="text"]{
+            width: calc(100% - 40px - 20px);
+            line-height: 30px;
+            outline: none;
+            transition: all 0.30s ease-in-out;
+            border: 1px solid $gris;
+        }
+        input[type="text"]:focus,
+        input[type="text"]:focus,
+        input[type="email"]:focus{
+            box-shadow: 0 0 5px $rosa;
+            border: 1px solid $rosa;
+        }
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        input[type="radio"] {
+            width: 18px;
+            height: 18px;
+                }  
+                    
+        }
+    }
+footer{
+background-color: $gris;
+    h6{
+    text-align: center;
+    font-family: $montserrat;
+    padding: 8px;
+    line-height:8px;  
+    }
+    address{
+    color: $grisOscuro;
+    font-family:$montserrat;   
+    }
+ }
+
+/* <!-- Botones Formularios--> */
+.botones input{
+@include buttonImput;
+}
+.botones input:hover{
+    color: $bordo;
+    border: 1px solid $bordo;
+}   
+ /* Etiquetas*/
+ .colorGeneral {
+    color: $gris;
+    font-family: $montserrat;
+}
+.colorGeneral ul{
+    color: $gris;
+    font-family:$gris;
+}
+.footer-container{
+    padding:10px 0 10px 0;
+    }
+.parrafo {
+    width: 56%;
+    margin: auto;
+    line-height: 40px;
+}
+
+.nosotrosFotos img{
+    width: 100%;
+    height:50%;
+}
+.navBackground{
+background-color:$rosa;
+font-family: $montserrat;
+margin: 0 auto;
+padding: auto;
+}
+
+
+.footer-container {
+padding: 10px 0 10px 0;
+  }
+.texto{
+text-align: center;
+width: 1400px;
+justify-content: center;
+  }
+.container-xl{
+margin: 0 auto;
+padding: 0;
+}
+.row{
+margin: 0 auto;
+padding: 0;
+}
+.nav-link {
+    color: $blanco !important;
+}
+.nav-link:hover {
+    color: $bordo!important;
+}
+.flexBox ul{
+    font-family: $montserrat;
+    font-size: 25px;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.flexBox ul li a{
+    color:rgb(252, 249, 248);
+    text-decoration: none;
+}
+
+.flexContainer{
+    width: 2800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flexContainer div h6{
+    text-align: center; 
+}
+.flexContainer div{
+    flex-basis: auto;    
+} 
+/* <!-- Grillas--> */
+
+.grid {
+@include grid;
+    }
+      
+    .grid div {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    border-radius: 3px;
+    text-align: center;
+    }
+      
+    .grid article img {
+    width: 100%;
+    border-radius: 10px;
+    }
+
+.text {
+    font-family:$montserrat;
+    padding: 0 20px 20px;
+}
+  
+.text h3{
+    text-transform: uppercase;
+    color: rgb(241, 163, 153);
+    font-size: 30px;
+    margin: 0;
+    line-height: 40px;
+}
+.grid article{
+    text-align: center;
+    } 
+/* <!--Transiciones botones--> */ 
+ .text button{
+@include button;
+}
+.text button:hover{
+    background:$grisOscuro;
+    border-bottom:3px solid rgb(95, 95, 94);
+    color:#f1f2f3;
+} 
+
+    .card {
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+          border: 0;
+         margin: 20px;
+      }
+
+      .card-header-title {
+        text-align: center;
+      }
+     .card-title{
+         color: $rosa;
+        }
+
+        .cards {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .card-item {
+            display: flex;
+            width: 100%;
+            padding: 0.5em;
+        }
+
+        .center {
+            text-align: center;
+        }
+        
+        /*Flexbox Cards*/
+        .cards {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .card-item {
+            display: flex;
+            width: 100%;
+            padding: 0.5em;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            padding: 0;
+            background-color: #FFFF;
+            border-radius: 3px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        .nosotros-body{ 
+        display: inline-block;
+        padding: 20px;
+        }
+        .card-img {
+            width: 100%;
+            border-radius: 3px 3px 0 0;
+        }
+        .card-img:hover {
+            opacity: 0.8;
+        }
+        .card-title,
+        .card-text,
+        .card-footer {
+            padding: 1em 1em 0;
+        }
+        
+        .card-footer button{
+           margin: 20px;
+            }
+        .btn:hover {
+            background: $rosa;
+            color: #333;
+        }       
+/* <!--Media queries--> */ 
+ @media screen and (max-width: 768px){
+    .grid {
+       grid-template-columns: repeat(2, 1fr);
+       margin: 0;
+       }
+       }
+   
+   @media screen and (max-width: 480px) {
+    .grid{
+       grid-template-columns: repeat(1, 1fr);
+       margin: 0;
+       }
+       }
+        /* ===== == = === 37.5em (600px) === = == ===== */
+        @media all and (min-width: 37.5em) {
+            .card-item {
+                    width: calc(100% / 12 * 6 );
+            }
+        }
+        /* ===== == = === 56.25em (900px) === = == ===== */
+        @media all and (min-width: 56.25em) {
+            .card-item {
+                    width: calc(100% / 12 * 4 );
+            }
+        }
+/* Estructura BEM:Bloques, elementos*/
+// .card {
+//     padding: 20px;
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+//     margin-bottom: 50px;
+//     width: 600px;
+//     background-color: $blanco;
+//     border-radius: 3px;
+//     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+//     margin: 10px 20px 40px 40px;
+//   }
+  
+//   .card__thumbnail {
+//     width: 350px;
+//     height: 250px;
+//     margin-right: 20px;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     display: inline-block;
+//   }
+  
+//   .card__img {
+//     width: 100%;
+//     height: 100%;
+//   }
+  
+//   .card__titulo {
+//     font-family:$montserrat;
+//     font-size: 30px;
+//     font-weight: normal;
+//     margin-bottom: 20px;
+//   }
+  
+//   .card__enlace {
+//     color: $rosa;
+//     text-decoration: none;
+//   }
+  
+//   .card__extracto {
+//     line-height: 28px;
+//     color: $gris;
+//     margin-bottom: 20px;
+//     width: 500px;
+//   }
+  
+//   .boton {
+//     border: none;
+//     min-width: 180px;
+//     height: 50px;
+//     padding: 0 30px;
+//     color: $blanco;
+//     background-color: $bordo;
+//     border-radius: 100px;
+//     text-decoration: none;
+//     display: inline-flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     transition: .3s ease all;
+//   }
+  
+//   .boton__texto {
+//     font-weight: 700;
+//     color:$blanco;
+//   }
+  
+//   .boton:hover {
+//     text-decoration: none;
+//     color: $bordo;
+//   }
+  
+  /* Modificador */
+//   .boton--absolute {
+//     position: absolute;
+//     right: 20px;
+//     bottom: -25px;
+//   }
+  
+//   .boton--green {
+//     background-color: $rosa;
+//   }
+  
+//   .boton--green:hover {
+//     background-color: $bordo;
+//   }
+  
+//   .frase {
+//     text-align: center;
+//     margin: 70px 0;
+//   }
+  
+//   .frase__texto {
+//     margin-bottom: 20px;
+//     font-size: 30px;
+//     font-family:$montserrat;
+//     font-weight: 600;
+//   }

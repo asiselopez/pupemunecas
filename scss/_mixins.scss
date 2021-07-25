@@ -1,0 +1,47 @@
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: stretch;
+    padding: 20px;
+    }
+@mixin button {
+        font-family:$montserrat;
+        font-size: 20px;
+        background: $rosa;
+        background: -moz-linear-gradient(90deg, rgba(240,148,138,1) 28%, rgba(227,123,149,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(240,148,138,1) 28%, rgba(227,123,149,1) 100%);
+        background: linear-gradient(90deg, rgba(240,148,138,1) 28%, rgba(227,123,149,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0948a",endColorstr="#e37b95",GradientType=1);
+        border-radius: 3px;
+        border: 0;
+        color: $blanco;
+        padding: 10px;
+        width: 90%;
+        font-weight: 600;
+        text-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+        text-transform: uppercase;
+        transition:all 1s linear;
+}
+@mixin buttonImput {
+    width: calc((100% - 10px)/2);
+    height: 50px;
+    color: $blanco;
+    background-color: $rosa;
+    border: 1px solid $blanco;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+@mixin form {
+    width: 50%;
+    padding: 20px;
+    font-family:$montserrat;
+    font-weight:600px;
+    font-size: 25px;
+    margin-top: 0;
+    background-color:$blanco;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
