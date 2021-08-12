@@ -26,7 +26,9 @@ body{
        font-weight:600;
        font-size: 20px;
        text-transform: uppercase;
+       line-height: 100px;
     }
+    
     h5 {
         @extend h1;
         font-size: 40px;
@@ -42,7 +44,7 @@ body{
         color: $grisOscuro;
         font-size: 20px;
         width: ($anchoParrafo/2)-500px;
-        text-align: justify;
+        text-align:center;
     }
     legend{
         color:$grisOscuro;
